@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dipin Silwal | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRN8GvHddoNpp+5bYq+JXw5lXwE5Nf2z5SzyvG1vSnJKD8zMZ5wG1fBBYQFfQGJjL0zJmVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -14,12 +15,12 @@
       transition: background 0.3s, color 0.3s;
     }
     body.dark-mode {
-      background: #1e272e;
-      color: #d2dae2;
+      background: #121212;
+      color: #e0e0e0;
     }
 
     nav {
-      background: #2c3e50;
+      background: #1e1e1e;
       color: #fff;
       padding: 1rem 2rem;
       display: flex;
@@ -41,7 +42,7 @@
       color: #74b9ff;
     }
     #toggleDarkMode {
-      background: #0984e3;
+      background: #3498db;
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 5px;
@@ -56,7 +57,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 4rem 2rem;
-      background: linear-gradient(to right, #74b9ff, #0984e3);
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
       color: #fff;
     }
     .intro { flex: 1; min-width: 280px; }
@@ -83,7 +84,7 @@
       list-style: none;
     }
     .skills li {
-      background: #0984e3;
+      background: #3498db;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 25px;
@@ -99,21 +100,24 @@
       transition: background 0.3s, color 0.3s;
     }
     body.dark-mode .projects .project-card {
-      background: #2f3640;
-      color: #dcdde1;
+      background: #1f1f1f;
+      color: #e0e0e0;
     }
 
     .socials a {
       margin-right: 1rem;
       text-decoration: none;
-      color: #0984e3;
+      color: #3498db;
       font-weight: 600;
+    }
+    .socials a i {
+      margin-right: 5px;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: #2c3e50;
+      background: #1e1e1e;
       color: #fff;
     }
   </style>
@@ -155,12 +159,12 @@
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-card">
-      <h3>Student Attendance System</h3>
-      <p>A web-based platform to manage and track student attendance using Python and Django.</p>
+      <h3>Customer Purchase Analysis</h3>
+      <p>Analyzed e-commerce purchase history using Python, Pandas, and Matplotlib to extract buying patterns, customer segments, and recommend future strategies.</p>
     </div>
     <div class="project-card">
-      <h3>Data Visualizer</h3>
-      <p>An interactive tool built using Matplotlib and Pandas to analyze and plot datasets.</p>
+      <h3>COVID-19 Data Dashboard</h3>
+      <p>Built an interactive dashboard using public COVID-19 datasets. Visualized daily trends using Matplotlib and data summaries with Pandas.</p>
     </div>
   </section>
 
@@ -168,8 +172,8 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:dipinsilwal4@gmail.com">dipinsilwal4@gmail.com</a></p>
     <div class="socials">
-      <a href="https://facebook.com/DeepinSilwal" target="_blank">Facebook</a>
-      <a href="https://instagram.com/deepinsilwal_404" target="_blank">Instagram</a>
+      <a href="https://facebook.com/DeepinSilwal" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+      <a href="https://instagram.com/deepinsilwal_404" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
   </section>
 
