@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dipin Silwal | Portfolio</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dipin Silwal</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f2f2f2;
-      color: #333;
+    /* Reset + body styles */
+    body, h1, h2, p, ul, li, a { margin:0; padding:0; }
+    body { font-family: sans-serif; line-height:1.6; background:#f8f8f8; }
+
+    /* HERO */
+    header { display:flex; flex-wrap:wrap; align-items:center;
+             justify-content:space-between; padding:4rem 2rem;
+             background:#fff; }
+    header .intro { flex:1; min-width:280px; }
+    header .intro h1 { font-size:2.5rem; }
+    header img { border-radius:50%; width:200px; height:200px;
+                 object-fit:cover; }
+
+    /* GRID SECTION (skills) */
+    .skills, .projects { display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:1rem; padding:2rem; background:#fff; margin-top:2rem;
     }
-    header {
-      background: #2b2b2b;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+    .skills li, .projects div { list-style:none;
+      background:#4CAF50; color:white;
+      padding:1rem; border-radius:8px; text-align:center;
     }
-    header img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      background: #4CAF50;
-      color: white;
-      margin: 5px;
-      padding: 10px 15px;
-      border-radius: 20px;
-    }
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #2b2b2b;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 1rem;
-      background: #e0e0e0;
-    }
+
+    /* ABOUT / CONTACT */
+    .about, footer { padding:2rem; background:#fff; margin-top:2rem; }
+    footer { text-align:center; font-size:0.9rem; }
+
+    .social-links a { margin: 0 0.5rem; color:#333; text-decoration:none; }
   </style>
 </head>
 <body>
 
+  <!-- Hero -->
   <header>
-    <img src="1000080563-min.png" alt="Dipin Silwal Profile Picture" />
-    <h1>Dipin Silwal</h1>
-    <p>Computer science student passionate about data science and machine learning</p>
+    <div class="intro">
+      <h1>Dipin Silwal</h1>
+      <p>Computer Science student passionate about data science & machine learning</p>
+    </div>
+    <img src="profile.jpg" alt="Dipin Silwal">
   </header>
 
-  <section>
+  <!-- Skills -->
+  <section class="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Python</li>
-      <li>NumPy</li>
-      <li>Matplotlib</li>
-      <li>Pandas</li>
-      <li>SQL</li>
-      <li>HTML</li>
-      <li>CSS</li>
+      <li>Python</li><li>NumPy</li><li>Matplotlib</li>
+      <li>Pandas</li><li>SQL</li><li>HTML</li><li>CSS</li>
     </ul>
   </section>
 
-  <section class="socials">
-    <h2>Connect With Me</h2>
-    <p>
-      <a href="https://facebook.com/DeepinSilwal" target="_blank">Facebook</a> |
-      <a href="https://instagram.com/deepinsilwal_404" target="_blank">Instagram</a> |
-      <a href="mailto:dipinsilwal4@gmail.com">Email Me</a>
-    </p>
+  <!-- Projects Placeholder (optional) -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <!-- You can replace these with actual projects -->
+    <div>Project 1</div><div>Project 2</div><div>Project 3</div>
+  </section>
+
+  <!-- Contact -->
+  <section class="about">
+    <h2>Connect with Me</h2>
+    <div class="social-links">
+      <a href="https://facebook.com/DeepinSilwal" target="_blank">Facebook</a>
+      |
+      <a href="https://instagram.com/deepinsilwal_404" target="_blank">Instagram</a>
+      |
+      <a href="mailto:dipinsilwal4@gmail.com">Email</a>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Dipin Silwal | All rights reserved.
+    &copy; 2025 Dipin Silwal
   </footer>
 
 </body>
 </html>
-
