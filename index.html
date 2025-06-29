@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dipin Silwal | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" />
   <style>
     :root {
-      --main-bg: #fff9ec;
-      --main-text: #3e2f1c;
-      --accent: #a0522d;
-      --highlight: #f4c542;
-      --dark-bg: #2c1b12;
-      --dark-text: #f3eac2;
-      --card-bg: #fffae6;
-      --dark-card: #3e2f1c;
+      --bg: #fdfdfd;
+      --text: #1e1e1e;
+      --accent: #2c3e50;
+      --highlight: #00b894;
+      --hover: #009879;
+      --dark-bg: #121212;
+      --dark-text: #e0e0e0;
+      --card-light: #ffffff;
+      --card-dark: #1e1e1e;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--main-bg);
-      color: var(--main-text);
+      background: var(--bg);
+      color: var(--text);
       transition: all 0.3s ease;
     }
     body.dark-mode {
@@ -32,36 +40,35 @@
 
     nav {
       background: var(--accent);
-      color: #fff;
+      color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      position: relative;
     }
-    nav h1 { font-size: 1.5rem; }
+    nav h1 {
+      font-size: 1.5rem;
+    }
     .nav-links {
       list-style: none;
       display: flex;
       gap: 1.5rem;
-      transition: max-height 0.4s ease;
     }
     .nav-links li a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: 500;
     }
     .nav-links li a:hover {
       color: var(--highlight);
     }
-
     #toggleDarkMode {
       background: var(--highlight);
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 5px;
-      color: black;
+      color: white;
       cursor: pointer;
       font-weight: bold;
     }
@@ -78,7 +85,6 @@
       margin: 4px 0;
       transition: 0.4s;
     }
-
     .hamburger.active .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
@@ -89,44 +95,33 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
 
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      .nav-links {
-        flex-direction: column;
-        width: 100%;
-        overflow: hidden;
-        max-height: 0;
-        background: var(--accent);
-      }
-      .nav-links.open {
-        max-height: 300px;
-        padding: 1rem 0;
-      }
-      nav ul li {
-        text-align: center;
-        margin: 0.5rem 0;
-      }
-    }
-
     header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 4rem 2rem;
-      background: linear-gradient(to right, var(--highlight), #d8a36e);
-      color: var(--main-text);
+      background: linear-gradient(to right, var(--accent), #34495e);
+      color: white;
     }
-    .intro { flex: 1; min-width: 260px; }
-    .intro h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .intro p { font-size: 1.1rem; }
+    .intro {
+      flex: 1 1 300px;
+      margin-bottom: 2rem;
+    }
+    .intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .intro p {
+      font-size: 1.1rem;
+    }
     header img {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #fff;
-      margin-top: 2rem;
+      border: 5px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     section {
@@ -151,15 +146,15 @@
     }
 
     .projects .project-card {
-      background: var(--card-bg);
+      background: var(--card-light);
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s;
     }
     body.dark-mode .projects .project-card {
-      background: var(--dark-card);
+      background: var(--card-dark);
       color: var(--dark-text);
     }
 
@@ -177,16 +172,35 @@
       text-align: center;
       padding: 2rem;
       background: var(--accent);
-      color: #fff;
+      color: white;
     }
 
     @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        width: 100%;
+        background: var(--accent);
+      }
+      .nav-links.open {
+        max-height: 300px;
+        padding: 1rem 0;
+      }
+      nav ul li {
+        text-align: center;
+        margin: 0.5rem 0;
+      }
       header {
         flex-direction: column;
         text-align: center;
       }
       header img {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
     }
   </style>
@@ -201,7 +215,6 @@
       <div class="bar"></div>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -234,11 +247,13 @@
     <h2>Projects</h2>
     <div class="project-card">
       <h3>Customer Purchase Analysis</h3>
-      <p>Analyzed e-commerce purchase history using Python, Pandas, and Matplotlib to extract buying patterns, customer segments, and recommend future strategies.</p>
+      <p>Analyzed e-commerce purchase history using Python and Matplotlib to extract patterns and recommend strategies.</p>
+      <p><a href="https://github.com/404dipin/Customer-Purchase-Analysis" target="_blank">View on GitHub</a></p>
     </div>
     <div class="project-card">
       <h3>Netflix Data Analysis</h3>
-      <p>Basic exploration, data cleaning, content type comparison (movies vs TV shows), and content trends analyzed using Pandas, NumPy, and Matplotlib.</p>
+      <p>Cleaned and visualized Netflix dataset using Pandas, NumPy and Matplotlib. Analyzed genres, content types and countries.</p>
+      <p><a href="https://github.com/404dipin/Netflix_Data_Analysis" target="_blank">View on GitHub</a></p>
     </div>
   </section>
 
@@ -248,6 +263,7 @@
     <div class="socials">
       <a href="https://facebook.com/DeepinSilwal" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
       <a href="https://instagram.com/deepinsilwal_404" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+      <a href="https://github.com/404dipin" target="_blank"><i class="fab fa-github"></i>GitHub</a>
     </div>
   </section>
 
